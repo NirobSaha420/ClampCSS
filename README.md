@@ -17,7 +17,7 @@ Ascend Your Vision with fluid typography, responsive utilities, and performance-
 </p>
 
 > **Ready to Clamp? ClampCSS is a modern, minimal, production-ready CSS framework featuring fluid typography & spacing, responsive utilities, accessibility-first design, and zero JavaScript dependencies.**  
-> 4 goals : Reduce your number of breakpoints, make web a little more accessible and a hope that it will reduce some headaches comes from build process and dependencies with some rememberable, easy to override codes.
+> 3 goals : Reduce your number of breakpoints and build time with fluid utilities, make web a little more accessible and a hope that it will reduce some headaches comes from build process and dependencies with some rememberable, easy to override codes.
 
 ---
 
