@@ -64,12 +64,12 @@ For optimal performance in production environments:
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
 <!-- Main stylesheet -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/NirobSaha420/ClampCSS@1.0.0/dist/v1.0.0/clamp.min.css" fetchpriority="high"> <!-- use fetchpriority for above-the-fold styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/NirobSaha420/ClampCSS@1.0.0/dist/v1.0.0/clamp.min.css" fetchpriority="high" crossorigin="anonymous"> <!-- use fetchpriority as your requirement -->
 ```
 
 ### Simpler Alternative
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/NirobSaha420/ClampCSS@1.0.0/dist/v1.0.0/clamp.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/NirobSaha420/ClampCSS@1.0.0/dist/v1.0.0/clamp.min.css" crossorigin="anonymous">
 ```
 
 ### Complete HTML Template
@@ -83,7 +83,7 @@ For optimal performance in production environments:
     
     <!-- ClampCSS Optimized Installation -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/NirobSaha420/ClampCSS@1.0.0/dist/v1.0.0/clamp.min.css" fetchpriority="high">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/NirobSaha420/ClampCSS@1.0.0/dist/v1.0.0/clamp.min.css" fetchpriority="high" crossorigin="anonymous">
     
     <!-- Your custom CSS -->
     <link rel="stylesheet" href="/path/to/styles.css" media="print" onload="this.media='all'">
@@ -130,7 +130,7 @@ Basic Structure
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClampCSS Project</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/NirobSaha420/ClampCSS@1.0.0/dist/v1.0.0/clamp.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/NirobSaha420/ClampCSS@1.0.0/dist/v1.0.0/clamp.min.css" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
