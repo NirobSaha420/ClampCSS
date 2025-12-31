@@ -7,6 +7,7 @@
     <img src="https://img.shields.io/badge/version-1.0.0-blue" alt="Version">
     <img src="https://img.shields.io/badge/size-3.7KB_gzipped-purple.svg" alt="Size">
     <img src="https://img.shields.io/badge/dependencies-none-darkgreen" alt="Dependencies">
+    <img src="https://img.shields.io/jsdelivr/gh/hm/NirobSaha420/ClampCSS" alt="jsDelivr hits">
     <img src="https://img.shields.io/badge/license-MIT-blue" alt="License">
     <img src="https://img.shields.io/badge/css-modern-ff69b4.svg" alt="CSS">
   </p>
@@ -37,6 +38,7 @@ Ascend Your Vision with fluid typography, responsive utilities, and performance-
 - [🏗️ Performance](#️-performance)
 - [🌐 Browser Support](#-browser-support)
 - [📄 License](#-license)
+- [❓ Frequently Asked Questions](#-frequently-asked-questions)
 - [💬 Community](#-community)
 
 ## ✨ Features
@@ -46,7 +48,7 @@ Ascend Your Vision with fluid typography, responsive utilities, and performance-
 | **Fluid Typography System** | CSS `clamp()` based responsive typography |
 | **Fluid Spacing System** | CSS `clamp()` based responsive Spacing |
 | **Modern CSS Reset** | Normalized base styles with accessibility focus |
-| **Utility-First Approach** | Comprehensive utility classes for rapid development |
+| **Utility Classes** | Comprehensive utility classes for rapid development |
 | **Performance Optimized** | Minimal CSS with smart defaults |
 | **Accessibility First** | WCAG-compliant focus management and semantic structure |
 | **Responsive by Design** | Mobile-first responsive utilities and components |
@@ -59,18 +61,15 @@ For optimal performance in production environments:
 
 ```html
 <!-- DNS pre-connection for faster loading -->
-<link rel="preconnect" href="https://clamp.ascender-solutions.com" crossorigin>
-
-<!-- Preload CSS for critical rendering path -->
-<link rel="preload" type="text/css" as="style" href="https://clamp.ascender-solutions.com/v1.0.0/clamp.min.css" fetchpriority="high"> <!-- use fetchpriority as your requirement -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
 <!-- Main stylesheet -->
-<link rel="stylesheet" href="https://clamp.ascender-solutions.com/v1.0.0/clamp.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/NirobSaha420/ClampCSS@1.0.0/dist/v1.0.0/clamp.min.css" fetchpriority="high"> <!-- use fetchpriority for above-the-fold styles -->
 ```
 
-### Quick Start (Simpler Alternative)
+### Simpler Alternative
 ```html
-<link rel="stylesheet" href="https://clamp.ascender-solutions.com/v1.0.0/clamp.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/NirobSaha420/ClampCSS@1.0.0/dist/v1.0.0/clamp.min.css">
 ```
 
 ### Complete HTML Template
@@ -83,24 +82,22 @@ For optimal performance in production environments:
     <title>My ClampCSS Project</title>
     
     <!-- ClampCSS Optimized Installation -->
-    <link rel="preconnect" href="https://clamp.ascender-solutions.com" crossorigin>
-    <link rel="preload" type="text/css" as="style" href="https://clamp.ascender-solutions.com/v1.0.0/clamp.min.css" fetchpriority="high"> <!-- use fetchpriority as your requirement -->
-    <link rel="stylesheet" href="https://clamp.ascender-solutions.com/v1.0.0/clamp.min.css">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/NirobSaha420/ClampCSS@1.0.0/dist/v1.0.0/clamp.min.css" fetchpriority="high">
     
     <!-- Your custom CSS -->
-    <link rel="stylesheet" href="/path/to/styles.css">
+    <link rel="stylesheet" href="/path/to/styles.css" media="print" onload="this.media='all'">
 </head>
 <body>
     <!-- Your content here -->
 </body>
 </html>
 ```
-### Alternative Method
-Self-Hosted
+### Download & Self-Host
 Download the file from:
 
 ```html
-https://clamp.ascender-solutions.com/v1.0.0/clamp.min.css
+https://cdn.jsdelivr.net/gh/NirobSaha420/ClampCSS@1.0.0/dist/v1.0.0/clamp.min.css
 ```
 Include in your project:
 ```html
@@ -111,14 +108,14 @@ If you use CSP, add these directives:
 
 ```http
 Content-Security-Policy: 
-  style-src 'self' https://clamp.ascender-solutions.com;
-  font-src 'self' https://clamp.ascender-solutions.com;
-  connect-src 'self' https://clamp.ascender-solutions.com;
+  style-src 'self' https://cdn.jsdelivr.net;
+  font-src 'self' https://cdn.jsdelivr.net;
+  connect-src 'self' https://cdn.jsdelivr.net;
 ```
 For stricter CSP:
 ```http
 Content-Security-Policy: 
-  style-src 'self' https://clamp.ascender-solutions.com;
+  style-src 'self' https://cdn.jsdelivr.net;
   font-src 'self';
   default-src 'self';
   script-src 'none';  # ClampCSS has no JavaScript
@@ -133,7 +130,7 @@ Basic Structure
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClampCSS Project</title>
-    <link rel="stylesheet" href="https://clamp.ascender-solutions.com/v1.0.0/clamp.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/NirobSaha420/ClampCSS@1.0.0/dist/v1.0.0/clamp.min.css">
 </head>
 <body>
     <div class="container">
@@ -146,12 +143,25 @@ Basic Structure
 ```
 
 ## 🎨 Core Features
+### Utility Classes Reference
+| Category | Class Pattern | Example |
+|----------|---------------|---------|
+| Spacing | `m-{0-4}`, `p-{0-4}` | `m-2 p-4` |
+| Typography | `text-{xs, sm, md, lg, xl, 2xl, 3xl, 4xl}` | `text-2xl` |
+| Colors | `color-{primary, success, warning, danger}` | `color-primary` |
+| Background | `bg-{primary, success, white, black}` | `color-white`, `bg-success` |
+| Flexbox | `flex`, `flex-center`, `gap-{0-4}` | `flex`, `flex-center`, `gap-2` |
+| Grid | `grid`, `grid-cols-{1-12}` | `grid grid-cols-3` |
+| Border Radius | `bra-{5, 10, 15, 25, 50}` | `bra-10` | 
+| Shadows | `shadow-{none, sm, md, lg, xl}` | `shadow-lg` |   
+
 Fluid Typography
 ```html
 <h1 class="text-4xl">Fluid Heading</h1> /* 48-72px */
 <p class="text-lg">Responsive paragraph text</p> /* 18-22px */
 <span class="text-xs">Small fluid text</span> /*10.666-12px*/
 ```
+
 Fluid Spacing
 ```html
 <!-- Spacing, (0 - 4 values) -->
@@ -159,6 +169,7 @@ Fluid Spacing
     <!-- Margin & Padding -->
 </div>
 ```
+
 Responsive Grid
 ```html
 <div class="grid grid-cols-3 gap-2">
@@ -167,7 +178,7 @@ Responsive Grid
     <div class="bg-warning p-2">Column 3</div>
 </div>
 ```
-Utility Classes
+Example Usage
 ```html
 <!-- Spacing, (0 - 4 values) -->
 <div class="m-2 p-4">
@@ -232,7 +243,7 @@ Override default variables in your CSS:
   --aspect-ratio: auto; /* Default value, change with inline css for each img tag */
 
   /* SPACING */
-  --spacing: 0.5rem; /*16px base*/
+  --spacing: 0.5rem;
   --spacing-vw: 0.5vw;
 
   /* FLUID TYPOGRAPHY */
@@ -259,9 +270,9 @@ Override default variables in your CSS:
 ```
 
 ## ♿ Accessibility Features
-- **Focus Management:** Visible focus indicators for keyboard navigation
+- **Focus Management:** Uses `:focus-visible` for intelligent focus indicators that only appear during keyboard navigation
 
-- **Reduced Motion:** Respects prefers-reduced-motion preferences
+- **Reduced Motion:** Respects `prefers-reduced-motion` media query
 
 - **Screen Reader Ready:** Semantic HTML structure
 
@@ -271,11 +282,13 @@ Override default variables in your CSS:
 ## 🏗️ Performance
 - **Minimal Footprint:** ~3.7KB gzipped
 
-- **Efficient Selectors:** Optimized CSS specificity
+- **Efficient Selectors:** Low-specificity single-class selectors using `:where()` for complex patterns like input[type="text"]
 
-- **Critical Path Optimization:** Preload and prefetch hints
+- **Critical Path Optimization:** Preconnect and `fetchpriority="high"` hints in installation guide. `Print` loading trick for non-critical CSS.
 
-- **No Render Blocking:** Non-blocking CSS loading
+- **No Render Blocking:** Optimized loading patterns shown in installation examples
+
+- **Zero Runtime:** Pure CSS with no JavaScript overhead
 
 ## 🌐 Browser Support
 - Chrome
@@ -284,15 +297,37 @@ Override default variables in your CSS:
 - Edge
 - Opera
 
-**Note:** Uses modern CSS features like `clamp()` and CSS Custom Properties.
+**Note:** Uses modern CSS features like `clamp()` and CSS Custom Properties. [View browser support details on caniuse.com](https://caniuse.com/css-math-functions)
 
 ## 📄 License
 MIT License © 2025 Nirob Chandra Saha
 
+
+## ❓ Frequently Asked Questions
+
+### Q: Why use ClampCSS over Tailwind/Bootstrap?
+A: ClampCSS is significantly smaller (~3.7KB vs. hundreds of KB), features built-in fluid typography/spacing using modern CSS, and requires no JavaScript, build process, or configuration to start.
+
+### Q: Does it work with React/Vue/Angular?
+A: Yes! It's purely CSS and completely framework-agnostic. Just include the stylesheet.
+
+### Q: How does ClampCSS handle CSS specificity?
+A: ClampCSS uses a flat specificity structure. All utility classes have single-class specificity (0,1,0), and complex selectors use `:where()` which has zero specificity. This makes overriding styles predictable and easy.
+
+### Q: How to override styles?
+A: You can override any utility class with your own CSS using higher specificity. For global theming, override the CSS Custom Properties (variables) in the `:root` selector as shown in the [Customization](#-customization) section.
+
+### Q: Can I use it with my existing CSS?
+A: Absolutely. It's designed to be non-invasive and can be used as a base layer or alongside other styles. Its reset is mild and its utility classes use a low-specificity single-class pattern.
+
+### Q: What accessibility standards does ClampCSS follow?
+A: ClampCSS follows WCAG standards. Focus management uses `:focus-visible` for keyboard users, and animations respect `prefers-reduced-motion`.
+
+
 ## 💬 Community
 - Facebook Public Group: ClampCSS
 
-- Facebook Page: Mr. Nr
+- Facebook Profile : [Mr. Nr](https://www.facebook.com/NirobChandraSaha)
 
 - Email: nr.classic2077@gmail.com or cto@ascender-solutions.com
 
