@@ -282,6 +282,8 @@ Override default variables in your CSS:
 ## 🏗️ Performance
 - **Minimal Footprint:** ~3.7KB gzipped
 
+- **Immutable Caching**: Browsers cache for 1 year
+
 - **Efficient Selectors:** Low-specificity single-class selectors using `:where()` for complex patterns like input[type="text"]
 
 - **Critical Path Optimization:** Preconnect and `fetchpriority="high"` hints in installation guide. `Print` loading trick for non-critical CSS.
